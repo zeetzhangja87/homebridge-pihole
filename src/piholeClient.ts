@@ -116,7 +116,7 @@ export class PiholeClient {
 		}
 
 		try {
-			const data = await readFile(this.options.sessionPath, "utf-8");
+			const data = await readFile(this.options.sessionPath);
 			const session = JSON.parse(data);
 
 			if (session && session.sid) {
